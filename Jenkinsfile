@@ -23,7 +23,7 @@ pipeline {
          stage('moving dist folder') {
             steps {
                 echo 'moving dist folder'               
-                bat 'xcopy /s /i /y "%WORKSPACE%\dist\angulartest" "C:\Apache24\htdocs\" '
+               // bat ' xcopy /s /i /y "%WORKSPACE%\dist\angulartest" "C:\Apache24\htdocs\" `
             }
         }
     }
