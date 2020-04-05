@@ -17,7 +17,7 @@ pipeline {
             steps {
                 echo 'building npm phase'
                 bat 'npm run build --production'
-                bat 'xcopy /s /i /y "%WORKSPACE%\dist\angulartest" "C:\Apache24\htdocs\" '
+              //  bat 'xcopy /s /i /y "%WORKSPACE%\dist\angulartest" "C:\Apache24\htdocs\" '
             }
         }
          stage('moving dist folder') {
