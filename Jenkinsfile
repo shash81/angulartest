@@ -4,13 +4,13 @@ pipeline {
         stage('Installing Pahse') {
             steps {
                 echo 'Installing npm phase'
-                sh 'npm install'
+                bat 'npm install'
             }
         }
         stage('Lint Pahse') {
             steps {
                 echo 'Installing npm phase'
-                sh 'npm run lint'
+                bat 'npm run lint'
             }
         }
     }
