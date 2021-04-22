@@ -26,23 +26,5 @@ pipeline {
                // bat ' xcopy /s /i /y "%WORKSPACE%/dist/angulartest" "C:/Apache24/htdocs/" '
             }
         }
-    }
-    post {
-    always {
-        echo 'always execute...'
-        // cleanWs() clean up our workspace
-    }
-    success {
-        echo 'Succeeded'
-        slackSend (color: '#BDFFC3', message: "pipeline build succeeded")
-    }
-    unstable {
-        echo 'Unstable'
-        slackSend (color: '#FFFE89', message: "pipeline build unstable")
-    }
-    failure {
-        echo 'Failed'
-        slackSend (color: '#FF9FA1', message: "pipeline build failed")
-    }
-  }
+    } 
 }
