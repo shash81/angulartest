@@ -12,7 +12,7 @@ pipeline {
             withSonarQubeEnv('LocalSonar') {
 
             bat '''
-            sonar-scanner.bat -D"sonar.projectKey=sample-test"
+            sonar-scanner.bat -D"sonar.projectKey=angular-test" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.login=752a1fb929ef94813d2748e87dfda41305784232"
 
             '''
             }
