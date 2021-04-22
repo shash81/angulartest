@@ -7,15 +7,17 @@ pipeline {
                 bat 'npm install'
             }
         }
-      stage('Sonar Analysis'){
-        withSonarQubeEnv('LocalSonar') {
-        
-        bat '''
-        sonar-scanner.bat -D"sonar.projectKey=sample-test"
-        
-        '''
+        stage('Sonar Analysis'){
+          steps{
+            withSonarQubeEnv('LocalSonar') {
+
+            bat '''
+            sonar-scanner.bat -D"sonar.projectKey=sample-test"
+
+            '''
+            }
+          }
         }
-      }
         stage('Lint Pahse') {
             steps {
                 echo 'Installing npm phase'
